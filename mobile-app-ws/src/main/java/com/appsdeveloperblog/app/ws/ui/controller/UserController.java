@@ -62,6 +62,8 @@ import io.swagger.annotations.ApiOperation;
 
 public class UserController {
 
+	
+	
 	@Autowired
 	private UserService UserService;
 
@@ -80,7 +82,8 @@ public class UserController {
 	  {MediaType.APPLICATION_XML_VALUE,MediaType.APPLICATION_JSON_VALUE}) 
 	  public UserRest getUsers(@PathVariable String Userid) {
 	  
-	  
+		  System.out.println("hi");
+		  
 		  UserRest userRest =new UserRest(); UserDto
 		  userDto=UserService.getUserById(Userid);
 	  
